@@ -57,6 +57,17 @@ app.get('/about',(req, res) => {
     }); //second argument can eb argument
 });
 
+// Projects page
+
+app.get('/projects',(req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'My Projects',
+        welcomeMessage: 'These are my projects',
+        project1: 'Notes.js',
+        project2: 'Server.js'
+    }); 
+});
+
 // route /bad send back json with errorMessage
 
 app.get('/bad',(req, res)=>{
